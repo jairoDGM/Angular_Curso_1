@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Formulario estatico</h1>
+  <form #myform="ngForm" (ngSubmit)="enviar()">
+    <div class="mb-3">
+      <label for="name" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="name" [ngModelOptions]="{standalone: true}" [(ngModel)]="user.name" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" [ngModelOptions]="{standalone: true}" [(ngModel)]="user.email" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

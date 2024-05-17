@@ -1,0 +1,9 @@
+<ng-container *ngIf="!loading"> <!--muestra los elementos si el loading es false-->
+  <h2>Producto seleccionado:</h2>
+  <h4>Producto: {{product?.name}}</h4>
+  <h5 *ngIf="product?.descripcion">Descripcion: {{product?.descripcion}}</h5>
+  <h6 [ngStyle]="{'color': color}">Precio: {{product?.price | currency: 'Q'}}</h6>
+  <button type="button" class="btn btn-success" routerLink="/products">Regresar</button>
+</ng-container>
+
+<ng-container *ngIf="loading">Cargando informacion.....</ng-container> <!--muestra los elementos si el loading es true-->
